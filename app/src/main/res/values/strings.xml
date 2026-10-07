@@ -42,11 +42,11 @@
     <string name="section_system">System</string>
     <string name="boot_switch">Start when the device turns on</string>
     <string name="battery_opt_title">Battery optimization</string>
-    <string name="battery_opt_on">On · tap to turn it off so the system never stops the line</string>
-    <string name="battery_opt_off">Off · the system won\'t stop the line</string>
+    <string name="battery_opt_on">On · tap to turn it off so the system never stops BatteryLine</string>
+    <string name="battery_opt_off">Off · the system won\'t stop BatteryLine</string>
 
     <string name="section_tile">Quick Settings tile</string>
-    <string name="tile_body">Turn the line on and off from Quick Settings. Long-press the tile to open these settings.</string>
+    <string name="tile_body">Turn BatteryLine on and off from Quick Settings. Long-press the tile to open these settings.</string>
     <string name="tile_add">Add tile</string>
     <string name="tile_already_added">The tile is already in Quick Settings.</string>
     <string name="tile_on">On</string>
@@ -58,6 +58,6 @@
     <string name="value_px" translatable="false">%1$d px</string>
     <string name="value_percent" translatable="false">%1$d %%</string>
 
-    <string name="channel_name">Battery line</string>
-    <string name="notification_title">Battery line active</string>
+    <string name="channel_name">Background service</string>
+    <string name="notification_title">BatteryLine is running</string>
 </resources>

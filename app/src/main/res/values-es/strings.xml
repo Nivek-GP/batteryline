@@ -41,11 +41,11 @@
     <string name="section_system">Sistema</string>
     <string name="boot_switch">Iniciar al encender el dispositivo</string>
     <string name="battery_opt_title">Optimización de batería</string>
-    <string name="battery_opt_on">Activada · toca para desactivarla y que el sistema nunca detenga la línea</string>
-    <string name="battery_opt_off">Desactivada · el sistema no detendrá la línea</string>
+    <string name="battery_opt_on">Activada · toca para desactivarla y que el sistema nunca detenga BatteryLine</string>
+    <string name="battery_opt_off">Desactivada · el sistema no detendrá BatteryLine</string>
 
     <string name="section_tile">Tile de Ajustes rápidos</string>
-    <string name="tile_body">Enciende y apaga la línea desde Ajustes rápidos. Mantén pulsado el tile para abrir estos ajustes.</string>
+    <string name="tile_body">Enciende y apaga BatteryLine desde Ajustes rápidos. Mantén pulsado el tile para abrir estos ajustes.</string>
     <string name="tile_add">Añadir tile</string>
     <string name="tile_already_added">El tile ya está en Ajustes rápidos.</string>
     <string name="tile_on">Activada</string>
@@ -54,6 +54,6 @@
     <string name="step_minus">Disminuir</string>
     <string name="step_plus">Aumentar</string>
 
-    <string name="channel_name">Línea de batería</string>
-    <string name="notification_title">Línea de batería activa</string>
+    <string name="channel_name">Servicio en segundo plano</string>
+    <string name="notification_title">BatteryLine está activa</string>
 </resources>
