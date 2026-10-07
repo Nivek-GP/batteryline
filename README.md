@@ -8,11 +8,11 @@
 
 ## About
 
-BatteryLine draws a thin white line along the top edge of the screen. The full screen width (minus the edges you set) means a full battery, and the line gets shorter as the battery drains. It sits over every app, starts with the device and can be turned on or off from a Quick Settings tile.
+Your battery, as a single line. BatteryLine draws a thin white line across the top of your screen: full width when the battery is full, shorter as it drains. No icons to read, no numbers to squint at. One look tells you how much is left, whatever app you're in.
 
-It was built for a **HiBy M300** music player (Android 13, portrait) and an **Alldocube iPlay 60 Mini Turbo** tablet (Android 14, portrait and landscape), but it works on any Android 13+ device.
+It's made for people who like a clean screen. The line is subtle enough to forget it's there, and always visible when you need it. It's at home on a music player, a phone or a tablet, in portrait or landscape.
 
-Dark monochrome UI with glass cards. It follows the system language: Spanish when the system is set to Spanish, English otherwise.
+Built originally for a **HiBy M300** music player and an **Alldocube iPlay 60 Mini Turbo** tablet, it runs on any device with Android 13 or later. Available in English and Spanish.
 
 ## Features
 
