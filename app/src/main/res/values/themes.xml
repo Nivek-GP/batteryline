@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Siempre oscuro: Material3.Dark no sigue el modo claro del sistema y no usa dynamic color. -->
+    <style name="Theme.Dap" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/dap_white</item>
+        <item name="colorOnPrimary">@color/dap_black</item>
+        <item name="colorPrimaryContainer">@color/dap_surface_high</item>
+        <item name="colorOnPrimaryContainer">@color/dap_text_primary</item>
+        <item name="colorSecondary">@color/dap_gray_300</item>
+        <item name="colorOnSecondary">@color/dap_black</item>
+        <item name="colorSurface">@color/dap_surface</item>
+        <item name="colorOnSurface">@color/dap_text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/dap_text_secondary</item>
+        <item name="colorOutline">@color/dap_outline</item>
+        <item name="colorControlActivated">@color/dap_white</item>
+        <item name="colorControlHighlight">@color/dap_ripple</item>
+        <item name="android:colorBackground">@color/dap_bg</item>
+        <item name="android:windowBackground">@drawable/dap_bg_screen</item>
+        <item name="android:textColorHighlight">#55FFFFFF</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+        <item name="android:enforceStatusBarContrast">false</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+</resources>

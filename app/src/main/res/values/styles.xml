@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tipografía pensada para pantallas de ~4". -->
+    <style name="Dap.Text" parent="">
+        <item name="android:textColor">@color/dap_text_primary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="Dap.Text.Display" parent="Dap.Text">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="Dap.Text.Item" parent="Dap.Text">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Dap.Text.Body" parent="Dap.Text">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/dap_text_secondary</item>
+        <item name="android:lineSpacingMultiplier">1.15</item>
+    </style>
+
+    <style name="Dap.Text.Caption" parent="Dap.Text">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/dap_text_secondary</item>
+    </style>
+
+    <style name="Dap.Text.Section" parent="Dap.Text">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/dap_text_secondary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.12</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginStart">4dp</item>
+    </style>
+
+    <!-- Tarjetas "glass": relleno blanco translúcido + borde fino. -->
+    <style name="Dap.Card" parent="">
+        <item name="android:background">@drawable/dap_bg_glass</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="Dap.Card.Clickable" parent="Dap.Card">
+        <item name="android:background">@drawable/dap_bg_glass_ripple</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <!-- Botón principal: degradado blanco a gris con texto negro. -->
+    <style name="Dap.Button.Primary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/dap_bg_button_primary</item>
+        <item name="android:textColor">@color/dap_black</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="Dap.Button.Ghost" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/dap_glass_stroke</item>
+        <item name="rippleColor">@color/dap_ripple</item>
+        <item name="android:textColor">@color/dap_text_primary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">16dp</item>
+    </style>
+
+    <!-- Slider monocromo: pista blanca sobre cristal, sin etiqueta flotante. -->
+    <style name="Dap.Slider" parent="Widget.Material3.Slider">
+        <item name="thumbColor">@color/dap_white</item>
+        <item name="trackColorActive">@color/dap_white</item>
+        <item name="trackColorInactive">@color/dap_glass_stroke</item>
+        <item name="haloColor">@color/dap_ripple</item>
+        <item name="tickVisible">false</item>
+        <item name="labelBehavior">gone</item>
+        <item name="trackStopIndicatorSize">0dp</item>
+        <item name="tickColor">@android:color/transparent</item>
+    </style>
+
+    <!-- Botones de un grupo de selección: el elegido se rellena de blanco. -->
+    <style name="Dap.Button.Toggle" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="backgroundTint">@color/toggle_bg</item>
+        <item name="strokeColor">@color/dap_glass_stroke</item>
+        <item name="rippleColor">@color/dap_ripple</item>
+        <item name="android:textColor">@color/toggle_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">44dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="Dap.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textColor">@color/dap_text_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="thumbTint">@color/switch_thumb</item>
+        <item name="trackTint">@color/switch_track</item>
+        <item name="trackDecorationTint">@color/switch_track_decoration</item>
+    </style>
+</resources>

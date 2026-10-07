@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta monocroma (la misma que app-launch-tools). -->
+    <color name="dap_black">#FF000000</color>
+    <color name="dap_white">#FFFFFFFF</color>
+    <color name="dap_gray_300">#FFD0D0D0</color>
+
+    <color name="dap_bg">#FF000000</color>
+    <color name="dap_surface">#FF121212</color>
+    <color name="dap_surface_high">#FF1E1E1E</color>
+    <color name="dap_outline">#33FFFFFF</color>
+
+    <color name="dap_text_primary">#FFFFFFFF</color>
+    <color name="dap_text_secondary">#99FFFFFF</color>
+
+    <color name="dap_glass">#14FFFFFF</color>
+    <color name="dap_glass_stroke">#26FFFFFF</color>
+    <color name="dap_ripple">#26FFFFFF</color>
+</resources>

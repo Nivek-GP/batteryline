@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="subtitle">Una línea fina sobre la barra de estado que se acorta a medida que baja la batería.</string>
+
+    <string name="permission_title">Falta un permiso</string>
+    <string name="permission_body">BatteryLine necesita mostrarse sobre otras apps para que la línea se vea encima de todo.</string>
+    <string name="permission_button">Permitir mostrar sobre otras apps</string>
+    <string name="permission_unavailable">Este dispositivo no tiene la pantalla de ese permiso. Concédelo con adb (consulta el README).</string>
+
+    <string name="enabled_switch">Mostrar línea</string>
+    <string name="battery_status">Batería %1$d %% · línea al %2$d %%</string>
+
+    <string name="section_line">Línea</string>
+    <string name="thickness_label">Grosor</string>
+    <string name="offset_label">Distancia desde arriba</string>
+    <string name="opacity_label">Opacidad</string>
+    <string name="anchor_label">Extremo fijo</string>
+    <string name="anchor_caption">El extremo que no se mueve cuando baja la batería.</string>
+    <string name="anchor_left">Izquierda</string>
+    <string name="anchor_center">Centro</string>
+    <string name="anchor_right">Derecha</string>
+
+    <string name="section_battery">Batería</string>
+    <string name="full_at_label">Línea completa al</string>
+    <string name="full_at_caption">Ponlo en 80 % si limitas la carga al 80 %: desde ese nivel la línea se ve completa.</string>
+    <string name="low_switch">Roja con batería baja</string>
+    <string name="low_threshold_label">Por debajo de</string>
+
+    <string name="section_edges">Bordes</string>
+    <string name="edges_portrait">Vertical</string>
+    <string name="edges_landscape">Horizontal</string>
+    <string name="edges_caption">Espacio libre a cada lado para que la línea no quede bajo las esquinas redondeadas. Gira el dispositivo para ajustar la otra orientación.</string>
+    <string name="margin_left_label">Izquierda</string>
+    <string name="margin_right_label">Derecha</string>
+    <string name="edges_auto">Ajustar a las esquinas</string>
+    <string name="edges_auto_unavailable">Este dispositivo no informa de la forma de sus esquinas. Ajusta los bordes a mano.</string>
+
+    <string name="section_preview">Vista previa</string>
+    <string name="preview_switch">Simular nivel de batería</string>
+    <string name="preview_label">Nivel</string>
+    <string name="preview_caption">Solo mientras esta pantalla está abierta. Útil para revisar los bordes con la línea completa.</string>
+
+    <string name="section_system">Sistema</string>
+    <string name="boot_switch">Iniciar al encender el dispositivo</string>
+    <string name="battery_opt_title">Optimización de batería</string>
+    <string name="battery_opt_on">Activada · toca para desactivarla y que el sistema nunca detenga la línea</string>
+    <string name="battery_opt_off">Desactivada · el sistema no detendrá la línea</string>
+
+    <string name="section_tile">Tile de Ajustes rápidos</string>
+    <string name="tile_body">Enciende y apaga la línea desde Ajustes rápidos. Mantén pulsado el tile para abrir estos ajustes.</string>
+    <string name="tile_add">Añadir tile</string>
+    <string name="tile_already_added">El tile ya está en Ajustes rápidos.</string>
+    <string name="tile_on">Activada</string>
+    <string name="tile_off">Desactivada</string>
+
+    <string name="channel_name">Línea de batería</string>
+    <string name="notification_title">Línea de batería activa</string>
+</resources>

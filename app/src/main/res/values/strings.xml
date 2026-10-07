@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">BatteryLine</string>
+    <string name="subtitle">A thin line across the status bar that shrinks as your battery drains.</string>
+
+    <string name="permission_title">Permission needed</string>
+    <string name="permission_body">BatteryLine needs to draw over other apps to show the line on top of everything.</string>
+    <string name="permission_button">Allow display over other apps</string>
+    <string name="permission_unavailable">This device has no screen for that permission. Grant it with adb (see the README).</string>
+
+    <string name="enabled_switch">Show line</string>
+    <string name="battery_status">Battery %1$d %% · line %2$d %% long</string>
+
+    <string name="section_line">Line</string>
+    <string name="thickness_label">Thickness</string>
+    <string name="offset_label">Distance from the top</string>
+    <string name="opacity_label">Opacity</string>
+    <string name="anchor_label">Fixed end</string>
+    <string name="anchor_caption">The end that stays in place as the battery drains.</string>
+    <string name="anchor_left">Left</string>
+    <string name="anchor_center">Center</string>
+    <string name="anchor_right">Right</string>
+
+    <string name="section_battery">Battery</string>
+    <string name="full_at_label">Full line at</string>
+    <string name="full_at_caption">Set it to 80 % if you limit charging to 80 %: the line is full from that level up.</string>
+    <string name="low_switch">Red when battery is low</string>
+    <string name="low_threshold_label">Below</string>
+
+    <string name="section_edges">Edges</string>
+    <string name="edges_portrait">Portrait</string>
+    <string name="edges_landscape">Landscape</string>
+    <string name="edges_caption">Space left free on each side so the line doesn\'t run under rounded corners. Rotate the device to adjust the other orientation.</string>
+    <string name="margin_left_label">Left</string>
+    <string name="margin_right_label">Right</string>
+    <string name="edges_auto">Auto-adjust to the corners</string>
+    <string name="edges_auto_unavailable">This device doesn\'t report its corner shape. Adjust the edges by hand.</string>
+
+    <string name="section_preview">Preview</string>
+    <string name="preview_switch">Simulate battery level</string>
+    <string name="preview_label">Level</string>
+    <string name="preview_caption">Only while this screen is open. Handy for checking the edges with a full line.</string>
+
+    <string name="section_system">System</string>
+    <string name="boot_switch">Start when the device turns on</string>
+    <string name="battery_opt_title">Battery optimization</string>
+    <string name="battery_opt_on">On · tap to turn it off so the system never stops the line</string>
+    <string name="battery_opt_off">Off · the system won\'t stop the line</string>
+
+    <string name="section_tile">Quick Settings tile</string>
+    <string name="tile_body">Turn the line on and off from Quick Settings. Long-press the tile to open these settings.</string>
+    <string name="tile_add">Add tile</string>
+    <string name="tile_already_added">The tile is already in Quick Settings.</string>
+    <string name="tile_on">On</string>
+    <string name="tile_off">Off</string>
+
+    <string name="value_px" translatable="false">%1$d px</string>
+    <string name="value_percent" translatable="false">%1$d %%</string>
+
+    <string name="channel_name">Battery line</string>
+    <string name="notification_title">Battery line active</string>
+</resources>
