@@ -53,24 +53,44 @@ class LinePrefs(context: Context) {
         get() = prefs.getBoolean(KEY_START_ON_BOOT, true)
         set(value) = prefs.edit { putBoolean(KEY_START_ON_BOOT, value) }
 
-    /** Margen en px que se deja libre en el borde izquierdo; cada orientación tiene el suyo. */
-    fun marginLeft(landscape: Boolean): Int = prefs.getInt(marginKey(landscape, "left"), 0)
+    /**
+     * Margen en px que se deja libre en el borde izquierdo (arriba a la izquierda en la
+     * rotación actual). Es el mismo en vertical y horizontal: las esquinas suelen ser simétricas.
+     */
+    var marginLeft: Int
+        get() = prefs.getInt(KEY_MARGIN_LEFT, 0)
+        set(value) = prefs.edit { putInt(KEY_MARGIN_LEFT, value) }
 
-    fun marginRight(landscape: Boolean): Int = prefs.getInt(marginKey(landscape, "right"), 0)
+    var marginRight: Int
+        get() = prefs.getInt(KEY_MARGIN_RIGHT, 0)
+        set(value) = prefs.edit { putInt(KEY_MARGIN_RIGHT, value) }
 
-    fun setMargins(landscape: Boolean, left: Int, right: Int) = prefs.edit {
-        putInt(marginKey(landscape, "left"), left)
-        putInt(marginKey(landscape, "right"), right)
+    fun setMargins(left: Int, right: Int) = prefs.edit {
+        putInt(KEY_MARGIN_LEFT, left)
+        putInt(KEY_MARGIN_RIGHT, right)
     }
 
-    fun setMarginLeft(landscape: Boolean, value: Int) = prefs.edit { putInt(marginKey(landscape, "left"), value) }
+    init {
+        migrateMargins()
+    }
 
-    fun setMarginRight(landscape: Boolean, value: Int) = prefs.edit { putInt(marginKey(landscape, "right"), value) }
-
-    private fun marginKey(landscape: Boolean, side: String) =
-        "margin_${if (landscape) "landscape" else "portrait"}_$side"
+    /** La 1.0.0 guardaba márgenes por orientación: se conserva el mayor de cada lado. */
+    private fun migrateMargins() {
+        val legacy = listOf("portrait", "landscape")
+        if (legacy.none { prefs.contains("margin_${it}_left") || prefs.contains("margin_${it}_right") }) return
+        prefs.edit {
+            if (!prefs.contains(KEY_MARGIN_LEFT)) putInt(KEY_MARGIN_LEFT, legacy.maxOf { prefs.getInt("margin_${it}_left", 0) })
+            if (!prefs.contains(KEY_MARGIN_RIGHT)) putInt(KEY_MARGIN_RIGHT, legacy.maxOf { prefs.getInt("margin_${it}_right", 0) })
+            legacy.forEach {
+                remove("margin_${it}_left")
+                remove("margin_${it}_right")
+            }
+        }
+    }
 
     companion object {
+        const val KEY_MARGIN_LEFT = "margin_left"
+        const val KEY_MARGIN_RIGHT = "margin_right"
         const val KEY_ENABLED = "enabled"
         const val KEY_THICKNESS = "thickness"
         const val KEY_OFFSET = "offset"
@@ -83,7 +103,7 @@ class LinePrefs(context: Context) {
 
         /** Claves que cambian el tamaño o la posición de la ventana (el resto solo redibuja). */
         fun affectsLayout(key: String?) =
-            key == null || key == KEY_THICKNESS || key == KEY_OFFSET || key.startsWith("margin_")
+            key == null || key == KEY_THICKNESS || key == KEY_OFFSET || key == KEY_MARGIN_LEFT || key == KEY_MARGIN_RIGHT
     }
 }
 

@@ -28,9 +28,7 @@
     <string name="low_threshold_label">Below</string>
 
     <string name="section_edges">Edges</string>
-    <string name="edges_portrait">Portrait</string>
-    <string name="edges_landscape">Landscape</string>
-    <string name="edges_caption">Space left free on each side so the line doesn\'t run under rounded corners. Rotate the device to adjust the other orientation.</string>
+    <string name="edges_caption">Space left free on each side so the line doesn\'t run under rounded corners. The same edges apply in portrait and landscape.</string>
     <string name="margin_left_label">Left</string>
     <string name="margin_right_label">Right</string>
     <string name="edges_auto">Auto-adjust to the corners</string>

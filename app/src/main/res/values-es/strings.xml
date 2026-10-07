@@ -27,9 +27,7 @@
     <string name="low_threshold_label">Por debajo de</string>
 
     <string name="section_edges">Bordes</string>
-    <string name="edges_portrait">Vertical</string>
-    <string name="edges_landscape">Horizontal</string>
-    <string name="edges_caption">Espacio libre a cada lado para que la línea no quede bajo las esquinas redondeadas. Gira el dispositivo para ajustar la otra orientación.</string>
+    <string name="edges_caption">Espacio libre a cada lado para que la línea no quede bajo las esquinas redondeadas. Se usan los mismos bordes en vertical y en horizontal.</string>
     <string name="margin_left_label">Izquierda</string>
     <string name="margin_right_label">Derecha</string>
     <string name="edges_auto">Ajustar a las esquinas</string>

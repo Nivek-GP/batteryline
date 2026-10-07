@@ -15,7 +15,6 @@ class Screen(windowManager: WindowManager) {
 
     val width: Int = metrics.bounds.width()
     val height: Int = metrics.bounds.height()
-    val landscape: Boolean = width > height
 
     /**
      * Alto de la status bar aunque esté oculta (apps a pantalla completa); es el

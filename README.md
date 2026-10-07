@@ -22,7 +22,7 @@ Dark monochrome UI with glass cards. It follows the system language: Spanish whe
 - **Custom full scale** — choose which level counts as a full line (e.g. 80 % if you limit charging to 80 %)
 - **Fixed end** — the line can shrink toward the right, the left or the center
 - **Low battery** — turns dark red below a level you choose (15 % by default)
-- **Edges for rounded corners** — left and right margins, saved separately for portrait and landscape, plus **Auto-adjust**, which reads the corner radius the system reports
+- **Edges for rounded corners** — left and right margins shared by portrait and landscape, with −/+ buttons for 1 px steps, plus **Auto-adjust**, which reads the corner radius the system reports
 - **Live preview** — simulate any battery level while tuning the line
 - **Starts on boot** and comes back after app updates
 - **Quick Settings tile** — tap to turn the line on or off; long-press to open the settings
@@ -49,7 +49,7 @@ adb install -r BatteryLine-x.x.x.apk
 1. Open **BatteryLine** and tap **Allow display over other apps**, then enable it for BatteryLine
 2. Turn on **Show line**
 3. **Line** — set the thickness (1 px sits right on the top edge), opacity and fixed end
-4. **Edges** — tap **Auto-adjust to the corners**, or move the sliders until both ends of the line are fully visible. Turn on **Simulate battery level** at 100 % to see the whole line while you adjust. On a tablet, rotate it and repeat for the other orientation
+4. **Edges** — tap **Auto-adjust to the corners**, or use the sliders and their −/+ buttons until both ends of the line are fully visible. Turn on **Simulate battery level** at 100 % to see the whole line while you adjust.
 5. **Battery optimization** — turn it off for BatteryLine so aggressive ROMs don't stop the line
 6. **Add tile** — adds the on/off tile to Quick Settings
 

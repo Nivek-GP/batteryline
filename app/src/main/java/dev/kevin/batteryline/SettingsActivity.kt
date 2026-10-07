@@ -75,8 +75,8 @@ class SettingsActivity : AppCompatActivity() {
         }
         binding.lowThreshold.bind(R.string.low_threshold_label, ::percent) { prefs.lowThreshold = it }
 
-        binding.marginLeft.bind(R.string.margin_left_label, ::px, steps = true) { prefs.setMarginLeft(screen.landscape, it) }
-        binding.marginRight.bind(R.string.margin_right_label, ::px, steps = true) { prefs.setMarginRight(screen.landscape, it) }
+        binding.marginLeft.bind(R.string.margin_left_label, ::px, steps = true) { prefs.marginLeft = it }
+        binding.marginRight.bind(R.string.margin_right_label, ::px, steps = true) { prefs.marginRight = it }
         binding.autoButton.setOnClickListener { autoAdjustEdges() }
 
         binding.previewSwitch.setOnCheckedChangeListener { _, checked ->
@@ -132,7 +132,6 @@ class SettingsActivity : AppCompatActivity() {
         binding.lowThreshold.setRange(5, 50, prefs.lowThreshold)
         binding.lowThreshold.setEnabled(prefs.lowEnabled)
 
-        binding.edgesTitle.setText(if (screen.landscape) R.string.edges_landscape else R.string.edges_portrait)
         renderMargins()
 
         binding.previewLevel.setRange(0, 100, Preview.level ?: batteryLevel() ?: 50)
@@ -154,8 +153,8 @@ class SettingsActivity : AppCompatActivity() {
     }
 
     private fun renderMargins() {
-        binding.marginLeft.setRange(0, screen.maxMargin, prefs.marginLeft(screen.landscape))
-        binding.marginRight.setRange(0, screen.maxMargin, prefs.marginRight(screen.landscape))
+        binding.marginLeft.setRange(0, screen.maxMargin, prefs.marginLeft)
+        binding.marginRight.setRange(0, screen.maxMargin, prefs.marginRight)
     }
 
     private fun renderBatteryStatus() {
@@ -173,7 +172,7 @@ class SettingsActivity : AppCompatActivity() {
             Toast.makeText(this, R.string.edges_auto_unavailable, Toast.LENGTH_LONG).show()
             return
         }
-        prefs.setMargins(screen.landscape, margins.first, margins.second)
+        prefs.setMargins(margins.first, margins.second)
         renderMargins()
     }
 

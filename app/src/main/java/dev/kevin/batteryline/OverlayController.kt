@@ -106,8 +106,8 @@ class OverlayController(context: Context, private val prefs: LinePrefs) {
         val screen = Screen(windowManager)
         val thickness = prefs.thickness.coerceIn(1, screen.statusBarHeight)
         val offset = prefs.offset.coerceIn(0, screen.statusBarHeight - thickness)
-        val left = prefs.marginLeft(screen.landscape)
-        val right = prefs.marginRight(screen.landscape)
+        val left = prefs.marginLeft
+        val right = prefs.marginRight
         params.x = left
         params.y = offset
         params.width = (screen.width - left - right).coerceAtLeast(1)
