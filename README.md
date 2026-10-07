@@ -8,11 +8,9 @@
 
 ## About
 
-Your battery, as a single line. BatteryLine draws a thin white line across the top of your screen: full width when the battery is full, shorter as it drains. No icons to read, no numbers to squint at. One look tells you how much is left, whatever app you're in.
+BatteryLine turns your battery level into a thin line across the top of the screen, getting shorter as the battery drains.
 
-It's made for people who like a clean screen. The line is subtle enough to forget it's there, and always visible when you need it. It's at home on a music player, a phone or a tablet, in portrait or landscape.
-
-Built originally for a **HiBy M300** music player and an **Alldocube iPlay 60 Mini Turbo** tablet, it runs on any device with Android 13 or later. Available in English and Spanish.
+It started with a music player: on a small screen, a tiny battery icon is easy to miss and hard to read. A line that spans the whole screen is the opposite: quiet enough to forget, impossible to misread. It now runs on any device with Android 13 or later, in English and Spanish.
 
 ## Features
 
