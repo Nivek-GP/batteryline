@@ -16,17 +16,14 @@ Dark monochrome UI with glass cards. It follows the system language: Spanish whe
 
 ## Features
 
-- **Always on top** — the line shows over every app, under the status bar icons, and the notification shade covers it when you pull it down
-- **Thickness from 1 px** — capped at the status bar height so the line never leaves the bar, with an optional distance from the top
-- **Smooth changes** — when the level changes by 1 %, the line slides to its new length instead of jumping
-- **Custom full scale** — choose which level counts as a full line (e.g. 80 % if you limit charging to 80 %)
-- **Fixed end** — the line can shrink toward the right, the left or the center
-- **Low battery** — turns dark red below a level you choose (15 % by default)
-- **Edges for rounded corners** — left and right margins shared by portrait and landscape, with −/+ buttons for 1 px steps, plus **Auto-adjust**, which reads the corner radius the system reports
-- **Live preview** — simulate any battery level while tuning the line
-- **Starts on boot** and comes back after app updates
-- **Quick Settings tile** — tap to turn the line on or off; long-press to open the settings
-- **Light on battery** — no polling, timers or wakelocks: the line only redraws when the level changes, and only animates while the screen is on
+- **Battery at a glance** — see how much charge is left without reading a number, in any app
+- **Barely there** — as thin as a single pixel, it blends into the status bar instead of covering your screen
+- **Fits your screen** — matches rounded corners, phones and tablets, portrait and landscape
+- **Smooth, never jumpy** — the line glides as the battery drains
+- **Warns you in time** — turns red when the battery gets low
+- **Made for charge limits** — if you stop charging at 80 %, the line can treat 80 % as full
+- **Set and forget** — starts with your device; a Quick Settings tile turns it on or off
+- **Light on battery** — it stays idle and only updates when the battery level changes
 
 ## Download
 
