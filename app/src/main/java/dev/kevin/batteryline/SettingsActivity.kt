@@ -75,8 +75,8 @@ class SettingsActivity : AppCompatActivity() {
         }
         binding.lowThreshold.bind(R.string.low_threshold_label, ::percent) { prefs.lowThreshold = it }
 
-        binding.marginLeft.bind(R.string.margin_left_label, ::px) { prefs.setMarginLeft(screen.landscape, it) }
-        binding.marginRight.bind(R.string.margin_right_label, ::px) { prefs.setMarginRight(screen.landscape, it) }
+        binding.marginLeft.bind(R.string.margin_left_label, ::px, steps = true) { prefs.setMarginLeft(screen.landscape, it) }
+        binding.marginRight.bind(R.string.margin_right_label, ::px, steps = true) { prefs.setMarginRight(screen.landscape, it) }
         binding.autoButton.setOnClickListener { autoAdjustEdges() }
 
         binding.previewSwitch.setOnCheckedChangeListener { _, checked ->
@@ -223,14 +223,34 @@ class SettingsActivity : AppCompatActivity() {
 
     private fun percent(value: Int) = getString(R.string.value_percent, value)
 
-    /** Nombre, formato del valor y acción del slider; el texto del valor sigue al slider siempre. */
-    private fun ViewSliderBinding.bind(@StringRes labelRes: Int, format: (Int) -> String, action: (Int) -> Unit) {
+    /**
+     * Nombre, formato del valor y acción del slider; el texto del valor sigue al slider siempre.
+     * Con [steps] aparecen botones −/+ que lo mueven de uno en uno, para el ajuste fino.
+     */
+    private fun ViewSliderBinding.bind(
+        @StringRes labelRes: Int,
+        format: (Int) -> String,
+        steps: Boolean = false,
+        action: (Int) -> Unit,
+    ) {
         label.setText(labelRes)
         value.text = format(slider.value.toInt())
         slider.addOnChangeListener { _, current, fromUser ->
             value.text = format(current.toInt())
             if (fromUser) action(current.toInt())
         }
+        if (!steps) return
+        minus.isVisible = true
+        plus.isVisible = true
+        minus.setOnClickListener { step(-1, action) }
+        plus.setOnClickListener { step(1, action) }
+    }
+
+    private fun ViewSliderBinding.step(delta: Int, action: (Int) -> Unit) {
+        val next = (slider.value + delta).coerceIn(slider.valueFrom, slider.valueTo)
+        if (next == slider.value) return
+        slider.value = next
+        action(next.toInt())
     }
 
     private fun ViewSliderBinding.setRange(from: Int, to: Int, current: Int) {
@@ -243,6 +263,8 @@ class SettingsActivity : AppCompatActivity() {
 
     private fun ViewSliderBinding.setEnabled(enabled: Boolean) {
         slider.isEnabled = enabled
+        minus.isEnabled = enabled
+        plus.isEnabled = enabled
         root.alpha = if (enabled) 1f else DISABLED_ALPHA
     }
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Fila de ajuste: nombre y valor arriba, slider debajo. -->
+<!-- Fila de ajuste: nombre y valor arriba, slider debajo; botones −/+ opcionales para ajuste fino. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -26,12 +27,36 @@
             android:fontFeatureSettings="tnum" />
     </LinearLayout>
 
-    <com.google.android.material.slider.Slider
-        android:id="@+id/slider"
-        style="@style/Dap.Slider"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:stepSize="1"
-        android:valueFrom="0"
-        android:valueTo="100" />
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/minus"
+            style="@style/Dap.StepButton"
+            android:contentDescription="@string/step_minus"
+            android:src="@drawable/ic_minus"
+            android:visibility="gone"
+            app:tint="@color/dap_text_primary" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider"
+            style="@style/Dap.Slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:stepSize="1"
+            android:valueFrom="0"
+            android:valueTo="100" />
+
+        <ImageButton
+            android:id="@+id/plus"
+            style="@style/Dap.StepButton"
+            android:contentDescription="@string/step_plus"
+            android:src="@drawable/ic_plus"
+            android:visibility="gone"
+            app:tint="@color/dap_text_primary" />
+    </LinearLayout>
 </LinearLayout>

@@ -53,6 +53,9 @@
     <string name="tile_on">Activada</string>
     <string name="tile_off">Desactivada</string>
 
+    <string name="step_minus">Disminuir</string>
+    <string name="step_plus">Aumentar</string>
+
     <string name="channel_name">Línea de batería</string>
     <string name="notification_title">Línea de batería activa</string>
 </resources>

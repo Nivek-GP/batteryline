@@ -108,4 +108,13 @@
         <item name="trackTint">@color/switch_track</item>
         <item name="trackDecorationTint">@color/switch_track_decoration</item>
     </style>
+
+    <!-- Botones −/+ junto a un slider para mover el valor de uno en uno. -->
+    <style name="Dap.StepButton" parent="">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/bg_step</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
 </resources>

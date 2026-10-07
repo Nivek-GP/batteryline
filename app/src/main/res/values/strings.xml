@@ -54,6 +54,9 @@
     <string name="tile_on">On</string>
     <string name="tile_off">Off</string>
 
+    <string name="step_minus">Decrease</string>
+    <string name="step_plus">Increase</string>
+
     <string name="value_px" translatable="false">%1$d px</string>
     <string name="value_percent" translatable="false">%1$d %%</string>
 

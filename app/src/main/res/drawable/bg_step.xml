@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Botón circular de cristal para los pasos de 1 px. -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/dap_ripple">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/dap_glass" />
+            <stroke
+                android:width="1dp"
+                android:color="@color/dap_glass_stroke" />
+        </shape>
+    </item>
+</ripple>
