@@ -56,6 +56,8 @@ adb install -r BatteryLine-x.x.x.apk
 
 BatteryLine runs as a foreground service. It doesn't ask for notification permission, so on Android 13+ its notification stays out of the shade.
 
+BatteryLine doesn't show up in Recents, so it can't be swiped away by accident (some ROMs force-stop apps swiped from Recents, which would also remove the line). To change settings, open it from the app drawer or long-press its Quick Settings tile.
+
 ## Testing without draining the battery
 
 ```bash

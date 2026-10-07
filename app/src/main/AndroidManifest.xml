@@ -15,8 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dap">
 
+        <!-- Fuera de Recientes: algunas ROMs (Alldocube) fuerzan la detención de la app al
+             deslizar su tarjeta, y eso se lleva por delante el servicio de la línea. -->
         <activity
             android:name=".SettingsActivity"
+            android:excludeFromRecents="true"
             android:exported="true"
             android:launchMode="singleTask">
             <intent-filter>

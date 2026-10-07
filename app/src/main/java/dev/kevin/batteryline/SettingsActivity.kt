@@ -94,11 +94,10 @@ class SettingsActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        if (enableAfterPermission && Settings.canDrawOverlays(this)) {
-            prefs.enabled = true
-            LineService.sync(this)
-        }
+        if (enableAfterPermission && Settings.canDrawOverlays(this)) prefs.enabled = true
         enableAfterPermission = false
+        // Si el sistema detuvo la app (p. ej. "forzar detención"), abrirla vuelve a mostrar la línea.
+        LineService.sync(this)
         render()
     }
 
